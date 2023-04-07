@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var outputText = "Hello, World!"
     var body: some View {
-        Text("Hello, Swift!")
-            .font(.largeTitle)
+        VStack {
+            Text(outputText)
+                .font(.largeTitle)
+            Button("切り替えボタン") {
+                outputText = "Hi, Swift!"
+            }
+            .padding(.all)
+            .background(Color.blue)
+            .foregroundColor(.white)
+        }
     }
 }
 
